@@ -3,44 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services</title>
-    <link rel="stylesheet" href="secondpage.css">
+    <title>Books</title>
+    <link rel="stylesheet" type="text/css" href="secondpage.css">
+    <script src="book.js" defer></script>
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <a class="brand" href="#">Arts</a>
+            <a class="brand" href="#">Books</a>
             <ul class="nav-links">
                 <li><a href="homepage.html">Home</a></li>
                 <li><a href="third.html">About Me</a></li>
-                <li><a href="second.html">Services</a></li>
+                <li><a href="second.html">Books</a></li>
                 <li><a href="fourth.html">Contact Us</a></li>
             </ul>
         </div>
     </nav>
-    <div class="container">
-        <h1 class="title">Services</h1>
-        <div class="service">
-            <h2>Art Consultation</h2>
-            <p>Providing expert advice and guidance to clients on selecting and purchasing art that suits their taste, style, and budget.</p>
+
+   <div class="container">
+        <h2>Recommended Book PDFs</h2>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search book on Wikipedia or PDF online...">
         </div>
-        <div class="service">
-            <h2>Custom Framing</h2>
-            <p>Providing framing services to protect and enhance the presentation of artworks.</p>
-        </div>
-        <div class="service">
-            <h2>Art Restoration and Conservation</h2>
-            <p>Repairing and preserving artworks that have been damaged or deteriorated over time.</p>
-        </div>
-        <div class="service">
-            <h2>Art Authentication</h2>
-            <p>Verifying the authenticity and provenance of artworks for buyers and collectors.</p>
-        </div>
-        <div class="service">
-            <h2>Commissioned Artwork</h2>
-            <p>Facilitating the creation of custom-made artworks based on client preferences.</p>
-        </div>
-        <img src="C:\Users\pradh\Desktop\website pics\london museum 12_6_19.jpeg" alt="arts" class="service-image">
+        <ul class="book-links" id="bookList">
+            <li>
+                <div class="book-info">
+                    <img src="https://covers.openlibrary.org/b/id/7222246-L.jpg" alt="The Art of War">
+                    <a href="https://www.gutenberg.org/ebooks/132" target="_blank">The Art of War - Sun Tzu</a>
+                </div>
+                <a class="download-button" href="https://www.gutenberg.org/ebooks/132.pdf" download>Download</a>
+            </li>
+
+            <li>
+                <div class="book-info">
+                    <img src="https://www.pdfbooksworld.com/image/cache/catalog/59-250x350.jpg" alt="Peter and Wendy">
+                    <a href="https://www.pdfbooksworld.com/bibi/pre.html?book=59.epub" target="_blank">Peter and Wendy - James Mathew Barrie</a>
+                </div>
+                <a class="download-button" href="https://www.pdfbooksworld.com/bibi/pre.html?book=59.epub" download>Download</a>
+            </li>
+            <li>
+                <div class="book-info">
+                    <img src="https://covers.openlibrary.org/b/id/8225261-L.jpg" alt="The Little Prince">
+                    <a href="https://www.planetebook.com/free-ebooks/the-little-prince.pdf" target="_blank">The Little Prince - Antoine de Saint-Exupéry</a>
+                </div>
+                <a class="download-button" href="https://www.planetebook.com/free-ebooks/the-little-prince.pdf" download>Download</a>
+            </li>
+            <li>
+                <div class="book-info">
+                    <img src="https://covers.openlibrary.org/b/id/8231856-L.jpg" alt="Pride and Prejudice">
+                    <a href="https://www.gutenberg.org/ebooks/1342" target="_blank">Pride and Prejudice - Jane Austen</a>
+                </div>
+                <a class="download-button" href="https://www.gutenberg.org/files/1342/1342-h/1342-h.htm" target="_blank">Read Online</a>
+            </li>
+            <li>
+                <div class="book-info">
+                    <img src="https://covers.openlibrary.org/b/id/7222246-L.jpg" alt="1984">
+                    <a href="https://files.libcom.org/files/1984.pdf" target="_blank">1984 - George Orwell</a>
+                </div>
+                <a class="download-button" href="https://files.libcom.org/files/1984.pdf" download>Download</a>
+            </li>
+        </ul>
+        <p id="notFound" style="text-align:center; color: red; display: none;">Book not found.</p>
     </div>
+
 </body>
 </html>
