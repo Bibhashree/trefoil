@@ -1,0 +1,98 @@
+.header{
+    display: flex;
+    align-items: center;
+    background-color: rgb(44 81 62); 
+    padding: 7px;
+}
+nav ul{
+    display: flex;
+    color: rgb(198 168 81);
+    list-style: none;
+    gap: 140px;
+    font-size: 20px;
+    margin-left: 90px;
+}
+a{
+   text-decoration: none; 
+   color: rgb(198 168 81);
+   font-family: Verdana;
+}
+a:hover{
+    background-color:rgb(26, 47, 36);
+    border-radius: 10%;
+}
+.logo{
+    border-radius: 25%;
+    margin-left: 20px;
+}
+.b1{
+    font-family: monospace;
+    font-size: 13px;
+    margin-left: 20px;
+}
+.definition{
+    text-align: center;
+    padding: 30px;
+}
+.wrap{
+    display: flex;
+    align-items: center;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 20px;
+}
+.deflogo{
+    text-align: center;
+    border-radius: 25%;
+}
+.container{
+    display: flex;
+}
+aside{
+    flex: 2;
+    background-color: whitesmoke;
+}
+.sideimg{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+h2{
+    font-family: math;
+    color:rgb(45, 120, 168);
+    text-align: center;
+    font-size: 30px;
+}
+article{
+    background-color: white;
+    font-family: monospace;
+    text-align: left;
+    line-height: 25px;
+    flex: 5;
+    font-size: 15px;
+    padding: 5px;
+}
+h3{
+    background-color: whitesmoke;
+    font-family: math;
+    color:rgb(133, 143, 131);
+    text-align: center;
+    font-size: 30px;
+}
+.book{
+    display: flex;
+    margin-left: 30px;
+    align-items: center;
+    margin-bottom: 60px;
+}
+.bookname{
+    font-family: monospace;
+    margin-left: 20px;
+    font-size: 14px;
+    background-color: whitesmoke;
+}
+.body{
+    margin-left: 90px;
+}
+.end{
+    text-align: center;
+}
