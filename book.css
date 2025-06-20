@@ -1,10 +1,37 @@
+.header{
+    display: flex;
+    align-items: center;
+    background-color: rgb(44 81 62); 
+    padding: 7px;
+}
+nav ul{
+    display: flex;
+    color: rgb(198 168 81);
+    list-style: none;
+    gap: 140px;
+    font-size: 20px;
+    margin-left: 90px;
+}
+a{
+   text-decoration: none; 
+   color: rgb(198 168 81);
+   font-family: Verdana;
+}
+a:hover{
+    background-color:rgb(26, 47, 36);
+    border-radius: 10%;
+}
+.logo{
+    border-radius: 25%;
+    margin-left: 20px;
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
     text-align: center;
-    background-color: rgb(228, 148, 244);
+    background-color: rgb(133, 143, 131);
 }
 
 .navbar {
