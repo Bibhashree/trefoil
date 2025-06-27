@@ -30,36 +30,43 @@ a:hover{
     font-size: 13px;
     margin-left: 20px;
 }
-.slider {
+.definition{
+    text-align: center;
+    padding: 30px;
+}
+
+.slider-wrapper {
   position: relative;
-  max-width: 100%;
+  width: 80%;
   margin: 20px auto;
   overflow: hidden;
-  height: 250px;
 }
 
-.slides {
+.custom-slider {
+  position: relative;
   display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: 300%;
+  align-items: center;
+  justify-content: center;
 }
 
-.slide {
-  width: 75%;
-  height: 250px;
+.slider-image {
+  width: 100%;
+  max-height: 400px;
+  border-radius: 8px;
   object-fit: cover;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .prev, .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(44, 81, 62, 0.7);
-  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
   border: none;
-  padding: 10px;
+  color: white;
+  font-size: 24px;
+  padding: 10px 15px;
   cursor: pointer;
-  font-size: 20px;
   border-radius: 50%;
 }
 
@@ -72,13 +79,9 @@ a:hover{
 }
 
 .prev:hover, .next:hover {
-  background-color: rgba(26, 47, 36, 0.9);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-.definition{
-    text-align: center;
-    padding: 30px;
-}
 .wrap{
     display: flex;
     align-items: center;
