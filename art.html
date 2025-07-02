@@ -1,83 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Page</title>
-    <link rel="stylesheet" href="art.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Art Gallery</title>
+  <link rel="stylesheet" href="art.css"/>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="art.js" defer></script>
 </head>
 <body>
-    <div class="header">
-        <img class="logo" src="Logo.png" height="80" width="80">
-            <div class="navigation" id="main-nav">
-                <nav>
-                    <ul id="navigation-list">
-                        <li><a href="Trefoil.html"> Home </a></li>
-                        <li><a href="art.html"> Art </a></li>
-                        <li><a href="book.html"> Book </a></li>
-                        <li><a href="about.html"> About </a></li>
-                        <li><a href="contact.html"> Contact </a></li>
-                    </ul>
-                </nav>
-        </div>
+  <!-- Header -->
+  <div class="header">
+    <img class="logo" src="Logo.png" alt="Logo" height="80" width="80"/>
+    <div class="navigation">
+      <nav>
+        <ul id="navigation-list">
+          <li><a href="Trefoil.html"> Home </a></li>
+          <li><a href="art.html"> Art </a></li>
+          <li><a href="book.html"> Book </a></li>
+          <li><a href="about.html"> About </a></li>
+          <li><a href="contact.html"> Contact </a></li>
+        </ul>
+      </nav>
     </div>
-    <div class="container">
-        <h1 class="title">Art Collection</h1>
+  </div>
 
-        <!-- Slider Section -->
-        <div class="slider">
-            <img class="slide" src="C:\Users\pradh\Desktop\trefoil\trefoil\art1.jpg" class="slide" alt="Slide 1">
-            <img class="slide" src="C:\Users\pradh\Desktop\trefoil\trefoil\art2.jpg" class="slide" alt="Slide 2">
-            <img class="slide" src="C:\Users\pradh\Desktop\trefoil\trefoil\art3.jpg" class="slide" alt="Slide 3">
-            <img class="slide" src="C:\Users\pradh\Desktop\trefoil\trefoil\art4.jpg" class="slide" alt="Slide 4">
-            <img class="slide" src="C:\Users\pradh\Desktop\trefoil\trefoil\art5.jpg" class="slide" alt="Slide 5">   
-            <img class="slide" src="C:\Users\pradh\Desktop\trefoil\trefoil\art6.jpg" class="slide" alt="Slide 6">
-        </div>
+  <!-- Slider -->
+  <div class="slider">
+    <img src="C:\Users\pradh\Desktop\trefoil\trefoil\front1.jpg" class="slide active" alt="Slide 1">
+    <img src="C:\Users\pradh\Desktop\trefoil\trefoil\front2.jpg" class="slide" alt="Slide 2">
+    <img src="C:\Users\pradh\Desktop\trefoil\trefoil\front3.jpg" class="slide" alt="Slide 3">
+  </div>
 
-        <div class="gallery">
-            <div class="item">
-                <img src="C:\Users\pradh\Desktop\trefoil\trefoil\art3.jpg" alt="Mona Lisa">
-                <h3>Mona Lisa</h3>
-                <p>$1,000,000,000</p>
-                <button class="add-to-cart" data-name="Mona Lisa" data-price="1000000000">Add to Cart</button>
-            </div>
-            <div class="item">
-                <img src="C:\Users\pradh\Desktop\trefoil\trefoil\art4.jpg" alt="The van">
-                <h3>Vincent Van Gogh</h3>
-                <p>$550,000</p>
-                <button class="add-to-cart" data-name="Vincent van Gogh" data-price="150000">Add to Cart</button>
-            </div>
-            <div class="item">
-                <img src="C:\Users\pradh\Desktop\trefoil\trefoil\art6.jpg" alt="The Scream">
-                <h3>The Scream</h3>
-                <p>$150,000</p>
-                <button class="add-to-cart" data-name="o grito" data-price="150000">Add to Cart</button>
-            </div>
-            <div class="item">
-                <img src="C:\Users\pradh\Desktop\trefoil\trefoil\art5.jpg" alt="The wave">
-                <h3>The Great Wave Off Kanagawa</h3>
-                <p>$500,000</p>
-                <button class="add-to-cart" data-name="The Great Wave Off Kanagawa" data-price="150000">Add to Cart</button>
-            </div>
-            <div class="item">
-                <img src="C:\Users\pradh\Desktop\trefoil\trefoil\art2.jpg" alt="The girl">
-                <h3>Girl With A Pearl Earring</h3>
-                <p>$250,000</p>
-                <button class="add-to-cart" data-name="girl with a pearl earring" data-price="150000">Add to Cart</button>
-            </div>
-            <div class="item">
-                <img src="C:\Users\pradh\Desktop\trefoil\trefoil\art1.jpg" alt="Starry Night">
-                <h3>Starry Night</h3>
-                <p>$100,000</p>
-                <button class="add-to-cart" data-name="Starry Night" data-price="100000">Add to Cart</button>
-            </div>
-        </div>
-
-        <h2>Shopping Cart</h2>
-        <ul id="cart-list"></ul>
-        <p>Total: $<span id="total">0</span></p>
+  <!-- Main Layout -->
+  <div class="main-content">
+    <!-- Search Section -->
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Search artworks online...">
+      <button id="search-btn">Search</button>
     </div>
 
-    <script src="art.js"></script>
+    <!-- Gallery -->
+    <div class="gallery">
+      <div class="img-box"><img src="C:\Users\pradh\Desktop\trefoil\trefoil\art1.jpg" alt="Art 1" class="gallery-img"></div>
+      <div class="img-box"><img src="C:\Users\pradh\Desktop\trefoil\trefoil\art2.jpg" alt="Art 2" class="gallery-img"></div>
+      <div class="img-box"><img src="C:\Users\pradh\Desktop\trefoil\trefoil\art3.jpeg" alt="Art 3" class="gallery-img"></div>
+      <div class="img-box"><img src="C:\Users\pradh\Desktop\trefoil\trefoil\art4.jpg" alt="Art 4" class="gallery-img"></div>
+      <div class="img-box"><img src="C:\Users\pradh\Desktop\trefoil\trefoil\art5.jpg" alt="Art 5" class="gallery-img"></div>
+      <div class="img-box"><img src="C:\Users\pradh\Desktop\trefoil\trefoil\art6.jpg" alt="Art 6" class="gallery-img"></div>
+      <div class="img-box"><img src="C:\Users\pradh\Desktop\trefoil\trefoil\art7.jpg" alt="Art 7" class="gallery-img"></div>
+      <div class="img-box"><img src="C:\Users\pradh\Desktop\trefoil\trefoil\art8.jpg" alt="Art 8" class="gallery-img"></div>
+      <div class="img-box"><img src="C:\Users\pradh\Desktop\trefoil\trefoil\art9.jpeg" alt="Art 9" class="gallery-img"></div>
+    </div>
+
+    <!-- Wikipedia Result -->
+    <div class="api-result">
+      <h3>Search Result from Wikipedia:</h3>
+      <img id="api-image" src="" alt="Searched Art" />
+    </div>
+  </div>
+
+  <aside class="links-sidebar">
+    <h3><b>Explore Art Online</h3></b>
+    <ul>
+      <li><a href="https://www.wikiart.org/" target="_blank">WikiArt</a></li>
+      <li><a href="https://www.metmuseum.org/art/collection" target="_blank">The Met Collection</a></li>
+      <li><a href="https://artsandculture.google.com/" target="_blank">Google Arts & Culture</a></li>
+      <li><a href="https://www.saatchiart.com/" target="_blank">Saatchi Art</a></li>
+      <li><a href="https://www.tate.org.uk/art" target="_blank">Tate Gallery</a></li>
+    </ul>
+  </aside>
+
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+  </div>
 </body>
 </html>
