@@ -1,23 +1,34 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const images = [
+    "slider/hom1.jpg",
+    "slider/hom2.jpg",
+    "slider/hom3.jpg",
+    "slider/hom4.jpg",
+    "slider/hom5.jpg"
+  ];
 
-  let currentSlide = 0;
+  let index = 0;
+  const sliderImage = document.querySelector(".slider-image");
+  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".next");
 
-  function showSlide(index) {
-    const slides = document.querySelector('.slides');
-    const totalSlides = document.querySelectorAll('.slide').length;
-    if (index >= totalSlides) currentSlide = 0;
-    else if (index < 0) currentSlide = totalSlides - 1;
-    else currentSlide = index;
-    slides.style.transform = 'translateX(' + (-currentSlide * 100) + '%)';
+  function showImage(i) {
+    sliderImage.src = images[i];
   }
 
-  function nextSlide() {
-    showSlide(currentSlide + 1);
-  }
+  prevBtn.addEventListener("click", () => {
+    index = (index - 1 + images.length) % images.length;
+    showImage(index);
+  });
 
-  function prevSlide() {
-    showSlide(currentSlide - 1);
-  }
+  nextBtn.addEventListener("click", () => {
+    index = (index + 1) % images.length;
+    showImage(index);
+  });
 
+  // Autoplay
   setInterval(() => {
-    nextSlide();
-  }, 4000); // change slide every 4 seconds
+    index = (index + 1) % images.length;
+    showImage(index);
+  }, 4000); // 4 seconds interval
+});
