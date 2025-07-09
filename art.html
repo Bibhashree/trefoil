@@ -9,27 +9,26 @@
   <script src="art.js" defer></script>
 </head>
 <body>
+
   <!-- Header -->
-  <div class="header">
+  <header class="header">
     <img class="logo" src="Logo.png" alt="Logo" height="80" width="80"/>
-    <div class="navigation">
-      <nav>
-        <ul id="navigation-list">
-          <li><a href="Trefoil.html"> Home </a></li>
-          <li><a href="art.html"> Art </a></li>
-          <li><a href="book.html"> Book </a></li>
-          <li><a href="about.html"> About </a></li>
-          <li><a href="contact.html"> Contact </a></li>
-        </ul>
-      </nav>
-    </div>
-  </div>
+    <nav class="main-nav">
+      <ul class="nav-list">
+        <li><a href="Trefoil.html">Home</a></li>
+        <li><a href="art.html">Art</a></li>
+        <li><a href="book.html">Book</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <!-- Slider -->
   <div class="slider">
-    <img src="C:\Users\pradh\Desktop\trefoil\trefoil\front1.jpg" class="slide active" alt="Slide 1">
-    <img src="C:\Users\pradh\Desktop\trefoil\trefoil\front2.jpg" class="slide" alt="Slide 2">
-    <img src="C:\Users\pradh\Desktop\trefoil\trefoil\front3.jpg" class="slide" alt="Slide 3">
+    <img src="front1.jpg" class="slide active" alt="Slide 1">
+    <img src="front2.jpg" class="slide" alt="Slide 2">
+    <img src="front3.jpg" class="slide" alt="Slide 3">
   </div>
 
   <!-- Main Layout -->
@@ -51,6 +50,9 @@
       <div class="img-box"><img src="gallery/art7.jpg" alt="Art 7" class="gallery-img"></div>
       <div class="img-box"><img src="gallery/art8.jpg" alt="Art 8" class="gallery-img"></div>
       <div class="img-box"><img src="gallery/art9.jpeg" alt="Art 9" class="gallery-img"></div>
+      <div class="img-box"><img src="gallery/art10.jpeg" alt="Art 10" class="gallery-img"></div>
+      <div class="img-box"><img src="gallery/art11.jpeg" alt="Art 11" class="gallery-img"></div>
+      <div class="img-box"><img src="gallery/art12.jpeg" alt="Art 12" class="gallery-img"></div>
     </div>
 
     <!-- Wikipedia Result -->
@@ -60,22 +62,25 @@
     </div>
   </div>
 
-  <aside class="links-sidebar">
-    <h3><b>Explore Art Online</h3></b>
-    <ul>
-      <li><a href="https://www.wikiart.org/" target="_blank">WikiArt</a></li>
-      <li><a href="https://www.metmuseum.org/art/collection" target="_blank">The Met Collection</a></li>
-      <li><a href="https://artsandculture.google.com/" target="_blank">Google Arts & Culture</a></li>
-      <li><a href="https://www.saatchiart.com/" target="_blank">Saatchi Art</a></li>
-      <li><a href="https://www.tate.org.uk/art" target="_blank">Tate Gallery</a></li>
-    </ul>
-  </aside>
-
-
   <!-- Lightbox -->
   <div id="lightbox" class="lightbox">
     <span class="close">&times;</span>
     <img class="lightbox-content" id="lightbox-img">
   </div>
+
+  <!-- Footer with Art Links -->
+  <footer class="footer">
+    <div class="footer-links">
+      <h3><b>Explore Art Online</b></h3>
+      <ul>
+        <li><a href="https://www.wikiart.org/" target="_blank">WikiArt</a></li>
+        <li><a href="https://www.metmuseum.org/art/collection" target="_blank">The Met Collection</a></li>
+        <li><a href="https://artsandculture.google.com/" target="_blank">Google Arts & Culture</a></li>
+        <li><a href="https://www.saatchiart.com/" target="_blank">Saatchi Art</a></li>
+        <li><a href="https://www.tate.org.uk/art" target="_blank">Tate Gallery</a></li>
+      </ul>
+    </div>
+  </footer>
+
 </body>
 </html>
