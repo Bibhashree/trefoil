@@ -135,28 +135,31 @@ h2 {
     border-radius: 4px;
 }
 
-.book-links a {
-    text-decoration: none;
+.book-info a {
     color: #333;
-    font-weight: bold;
+    transition: none;
+}
+
+.book-info a:hover {
+    background-color: rgb(219, 219, 219);
+    border-radius: 0;
+    color: #333; 
 }
 
 .download-button {
+    font-size: 18px;
+    font-family: monospace;
     padding: 6px 12px;
-    background-color: rgb(152, 180, 165); 
-    color: rgb(198 168 81); 
+    background-color: rgb(75, 109, 92); 
+    color: white; 
     text-decoration: none;
     border-radius: 5px;
     transition: all 0.3s ease; 
 }
 
 .download-button:hover {
-    background-color: rgb(26, 47, 36); 
-    color: #fff; 
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
-}
-
-.download-button:hover {
+    font-size: 18px;
+    font-family: monospace;
     background-color: rgb(26, 47, 36);
     color: rgb(198 168 81); 
 }

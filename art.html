@@ -66,11 +66,17 @@
     </div>
     
     <!-- Wikipedia Result -->
-    <div class="api-result">
-      <h3>Search Result from Wikipedia:</h3>
-      <img id="api-image" src="" alt="Searched Art" />
+<div class="api-result">
+    <h3>Search Result :</h3>
+    <div class="loading-dots">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
     </div>
-  </div>
+    <div id="api-error" style="display: none; color: red; margin: 20px 0;"></div>
+    <img id="api-image" src="" alt="Searched Art" style="display: none;"/>
+    <p id="api-caption" style="display: none; text-align: center; margin-top: 10px; font-style: italic;"></p>
+</div>
 
   <!-- Lightbox -->
   <div id="lightbox" class="lightbox">
