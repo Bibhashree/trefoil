@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Art Gallery</title>
+  <title>Art</title>
   <link rel="stylesheet" href="art.css"/>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="art.js" defer></script>
@@ -11,32 +11,36 @@
 <body>
 
   <!-- Header -->
-  <header class="header">
-    <img class="logo" src="Logo.png" alt="Logo" height="80" width="80"/>
-    <nav class="main-nav">
-      <ul class="nav-list">
-        <li><a href="Trefoil.html">Home</a></li>
-        <li><a href="art.html">Art</a></li>
-        <li><a href="book.html">Book</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="header">
+    <img class="logo" src="Logo.png" height="80" width="80">
+    <div class="navigation" id="main-nav">
+      <nav>
+        <ul id="navigation-list">
+            <li><a href="Trefoil.html"> Home </a></li>
+            <li><a href="art.html"> Art </a></li>
+            <li><a href="book.html"> Book </a></li>
+            <li><a href="about.html"> About </a></li>
+            <li><a href="contact.html"> Contact </a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
 
   <!-- Slider -->
   <div class="slider">
-    <img src="front1.jpg" class="slide active" alt="Slide 1">
-    <img src="front2.jpg" class="slide" alt="Slide 2">
-    <img src="front3.jpg" class="slide" alt="Slide 3">
+    <img src="slider/ar1.jpg" class="slide active" alt="Slide 1">
+    <img src="slider/ar2.jpg" class="slide" alt="Slide 2">
+    <img src="slider/ar3.jpg" class="slide" alt="Slide 3">
+    <img src="slider/ar4.jpg" class="slide" alt="Slide 4">
+    <img src="slider/ar5.jpg" class="slide" alt="Slide 5">
   </div>
 
   <!-- Main Layout -->
   <div class="main-content">
-    <!-- Search Section -->
-    <div class="search-container">
-      <input type="text" id="search-input" placeholder="Search artworks online...">
-      <button id="search-btn">Search</button>
+
+    <!-- Quote -->
+    <div class="quote">
+      <label class="write">Art should comfort the disturbed and <br>disturb the comfortable.</label>
     </div>
 
     <!-- Gallery -->
@@ -54,7 +58,13 @@
       <div class="img-box"><img src="gallery/art11.jpeg" alt="Art 11" class="gallery-img"></div>
       <div class="img-box"><img src="gallery/art12.jpeg" alt="Art 12" class="gallery-img"></div>
     </div>
-
+    
+    <!-- Search Section -->
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Search artworks online...">
+      <button id="search-btn">Search</button>
+    </div>
+    
     <!-- Wikipedia Result -->
     <div class="api-result">
       <h3>Search Result from Wikipedia:</h3>
