@@ -1,6 +1,7 @@
 body, html {
   margin: 0;
   padding: 0;
+  background-color: rgb(201, 246, 201);
 }
 
 .header {
@@ -62,7 +63,7 @@ a:hover{
 /* Quote */
 .quote {
   text-align: center;
-  background-color: rgb(152, 180, 165);
+  background-color: rgb(105, 129, 116);
   color: rgb(1, 53, 13);
   font-size: 60px;
   border-radius: 10px;
