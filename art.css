@@ -1,7 +1,7 @@
 body, html {
   margin: 0;
   padding: 0;
-  background-color: rgb(201, 246, 201);
+  background-color: rgb(213, 231, 213);
 }
 
 .header {
@@ -155,7 +155,7 @@ a:hover{
     position: absolute;
     top: 20px;
     right: 30px;
-    color: #f1f1f1;
+    color: #438b60;
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
@@ -235,13 +235,13 @@ a:hover{
   top: 20px;
   right: 35px;
   font-size: 40px;
-  color: rgb(255, 255, 255);
+  color: rgb(63, 132, 86);
   cursor: pointer;
 }
 
 /* Footer */
 .footer {
-  background-color: #acd190a7;
+  background-color: #23553ba7;
   margin-top: 40px;
   padding: 20px;
   text-align: center;
