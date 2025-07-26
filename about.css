@@ -89,26 +89,24 @@ body {
 
 .title {
     text-align: center;
-    color: #333;
+    color: #174324;
 }
 
 .quote {
-    font-style: italic;
-    color: #555;
-    margin: 20px 0;
-    text-align: center;
-    transition: color 0.3s, background 0.3s, box-shadow 0.3s;
-    background: #f8f8f8;
-    border-radius: 8px;
-    padding: 12px 18px;
-    display: inline-block;
-    cursor: pointer;
-    align-items: center;
+  text-align: center;
+  background: #e0f7ef;
+  color: rgb(1, 53, 13);
+  font-size: 30px;
+  border-radius: 10px;
+  font-family: 'Brush Script MT', cursive, sans-serif;
+  margin: 20px auto; 
+  max-width: 90%; 
+  padding: 20px; 
 }
-.quote:hover {
-    color: #2c513e;
-    background: #e0f7ef;
-    box-shadow: 0 2px 16px #4fd1b344;
+
+.write {
+  margin: 0; 
+  padding: 10px; 
 }
 
 .section {
