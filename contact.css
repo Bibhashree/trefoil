@@ -81,11 +81,17 @@ body {
 .container {
     max-width: 800px;
     margin: 30px auto;
-    background: white;
+    background: linear-gradient(135deg, #f4f4f4 60%, #e0f7ef 100%);
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 18px;
+    box-shadow: 0px 0px 18px rgba(44, 81, 62, 0.13);
     text-align: left;
+    position: relative;
+    transition: box-shadow 0.4s;
+}
+.container:focus-within {
+    box-shadow: 0 0 0 4px #b2e5d6, 0px 0px 18px rgba(44, 81, 62, 0.18);
+    border: 1.5px solid #2c513e;
 }
 
 .title {
@@ -97,30 +103,79 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    animation: formFadeIn 0.9s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@keyframes formFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .contact-form label {
     font-weight: bold;
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: color 0.3s;
+    color: #2c513e;
+    margin-bottom: 2px;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border-color: #2c513e;
+    background: #f0f8f5;
+    box-shadow: 0 0 12px #2c513e33;
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+.form-success {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1em;
 }
 
 .contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    margin-bottom: 18px;
+    font-size: 1em;
+    transition: border 0.2s, background 0.2s;
+    background: #f8fdfb;
+    border: 1.5px solid #b2e5d6;
+    box-shadow: 0 1px 2px #2c513e11;
+    position: relative;
+    z-index: 1;
 }
 
 .contact-form button {
-    background: #333;
-    color: white;
-    padding: 10px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(44,81,62,0.13);
+    background: linear-gradient(90deg, #2c513e 60%, #4fd1b3 100%);
+    color: #fff;
     border: none;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out;
+    padding: 12px 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background 0.3s, box-shadow 0.3s, filter 0.3s;
+    filter: brightness(0.98);
 }
 
 .contact-form button:hover {
-    background: #555;
+    background: linear-gradient(90deg, #4fd1b3 0%, #2c513e 100%);
+    box-shadow: 0 0 16px #4fd1b3cc, 0 2px 8px rgba(44,81,62,0.18);
+    filter: brightness(1.05);
 }
 
 .contact-info {
@@ -128,4 +183,77 @@ body {
     margin-top: 20px;
     padding-top: 10px;
     border-top: 2px solid #ddd;
+}
+
+.sum-effect-container {
+    margin: 40px auto 0 auto;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(44,81,62,0.07);
+    padding: 24px 20px 20px 20px;
+    max-width: 500px;
+    text-align: center;
+    border: 2px solid #e0e0e0;
+}
+.sum-title {
+    color: #2c513e;
+    margin-bottom: 18px;
+    font-size: 1.3em;
+    font-family: 'Verdana', sans-serif;
+    letter-spacing: 1px;
+}
+.sum-fields {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+.sum-fields input[type="number"] {
+    width: 90px;
+    padding: 8px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+.sum-fields input[type="number"]:focus {
+    border-color: #2c513e;
+    box-shadow: 0 0 4px #2c513e33;
+    outline: none;
+}
+.plus-sign {
+    font-size: 1.5em;
+    color: #888;
+    font-weight: bold;
+}
+#sum-btn {
+    background: #2c513e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 18px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 4px rgba(44,81,62,0.08);
+}
+#sum-btn:hover {
+    background: #3e6b4e;
+}
+.sum-result {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #155724;
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    padding: 10px 0;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+.sum-result.show {
+    opacity: 1;
+    transform: translateY(0);
 }

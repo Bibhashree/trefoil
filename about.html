@@ -8,19 +8,20 @@
 </head>
 <body>
     <div class="header">
-            <img class="logo" src="Logo.png" height="80" width="80">
-            <div class="navigation" id="main-nav">
-                <nav>
-                    <ul id="navigation-list">
-                        <li><a href="Trefoil.html"> Home </a></li>
-                        <li><a href="art.html"> Art </a></li>
-                        <li><a href="book.html"> Book </a></li>
-                        <li><a href="about.html"> About </a></li>
-                        <li><a href="contact.html"> Contact </a></li>
-                    </ul>
-                </nav>
-            </div>
+        <img class="logo" src="Logo.png" height="80" width="80">
+        <div class="navigation" id="main-nav">
+            <nav>
+                <ul id="navigation-list">
+                    <li><a href="Trefoil.html"> Home </a></li>
+                    <li><a href="art.html"> Art </a></li>
+                    <li><a href="book.html"> Book </a></li>
+                    <li><a href="about.html" class="active"> About </a></li>
+                    <li><a href="contact.html"> Contact </a></li>
+                </ul>
+            </nav>
         </div>
+    </div>
+
     <div class="container">
         <h1 class="title">About Us</h1>
         <blockquote class="quote">
@@ -39,7 +40,38 @@
             <h2>Immersive Exhibitions and Events</h2>
             <p>We host exhibitions, events, and artist showcases that provide a platform for artists to connect with the community, share their creative process, and offer insights into their work.</p>
         </div>
-        <img src="muesum.jpg" alt="Arts Gallery" class="about-image">
+        <img src="front1.jpg" alt="Arts Gallery Front View" class="about-image">
+        <div id="about-popup" class="about-popup-modal" style="display:none;">
+            <div class="about-popup-content">
+                <span class="about-popup-close" id="about-popup-close">&times;</span>
+                <h2>Welcome to Arts Gallery!</h2>
+                <p>Discover our story, meet diverse artists, and explore immersive exhibitions. Enjoy your visit!</p>
+            </div>
+        </div>
     </div>
+    <script>
+      window.addEventListener('DOMContentLoaded', function() {
+        var popup = document.getElementById('about-popup');
+        var closeBtn = document.getElementById('about-popup-close');
+        popup.style.display = 'flex';
+        closeBtn.onclick = function() {
+          popup.style.display = 'none';
+        };
+        // Optional: close on outside click
+        popup.onclick = function(e) {
+          if (e.target === popup) popup.style.display = 'none';
+        };
+      });
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Trefoil. All rights reserved.</p>
+        <p>Follow us on 
+            <a href="#">Instagram</a> | 
+            <a href="#">Facebook</a> | 
+            <a href="#">Twitter</a>
+        </p>
+    </footer>
 </body>
 </html>
