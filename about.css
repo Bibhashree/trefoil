@@ -103,6 +103,7 @@ body {
     padding: 12px 18px;
     display: inline-block;
     cursor: pointer;
+    align-items: center;
 }
 .quote:hover {
     color: #2c513e;
