@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Trefoil</title>
+    <link rel="stylesheet" href="Trefoil.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, rgb(152, 180, 165) 0%, rgb(44, 81, 62) 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .privacy-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.6;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            margin-bottom: 20px;
+            animation: slideInUp 0.8s ease-out;
+        }
+        
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .privacy-container h1 {
+            color: #174324;
+            border-bottom: 3px solid linear-gradient(90deg, rgb(44, 81, 62), rgb(198, 168, 81));
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-align: center;
+            background: linear-gradient(45deg, rgb(44, 81, 62), rgb(198, 168, 81));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .privacy-container h2 {
+            color: #174324;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            position: relative;
+            padding-left: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .privacy-container h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 25px;
+            background: linear-gradient(45deg, rgb(44, 81, 62), rgb(198, 168, 81));
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        
+        .privacy-container h2:hover::before {
+            width: 8px;
+            background: linear-gradient(45deg, rgb(198, 168, 81), rgb(44, 81, 62));
+        }
+        
+        .privacy-container h2:hover {
+            color: rgb(44, 81, 62);
+            transform: translateX(5px);
+        }
+        
+        .privacy-container p {
+            margin-bottom: 20px;
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.8;
+            transition: all 0.3s ease;
+        }
+        
+        .privacy-container p:hover {
+            color: #333;
+            transform: translateX(3px);
+        }
+        
+        .privacy-container ul {
+            margin-bottom: 20px;
+            padding-left: 25px;
+            animation: slideInLeft 0.6s ease-out;
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .privacy-container li {
+            margin-bottom: 12px;
+            color: #555;
+            position: relative;
+            padding-left: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .privacy-container li::before {
+            content: '🔒';
+            position: absolute;
+            left: 0;
+            color: rgb(44, 81, 62);
+            font-size: 0.8em;
+            transition: all 0.3s ease;
+        }
+        
+        .privacy-container li:hover {
+            color: #333;
+            transform: translateX(5px);
+        }
+        
+        .privacy-container li:hover::before {
+            color: rgb(198, 168, 81);
+            transform: scale(1.2);
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: rgb(44, 81, 62);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            padding: 10px 20px;
+            border-radius: 25px;
+            background: linear-gradient(45deg, rgb(44, 81, 62), rgb(198, 168, 81));
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(44, 81, 62, 0.3);
+        }
+        
+        .back-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(44, 81, 62, 0.4);
+            text-decoration: none;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, rgb(44, 81, 62) 0%, rgb(198, 168, 81) 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 25px 0;
+            box-shadow: 0 8px 25px rgba(44, 81, 62, 0.3);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+        
+        .section-card {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border-left: 5px solid rgb(44, 81, 62);
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            border-left-color: rgb(198, 168, 81);
+        }
+        
+        .last-updated {
+            background: linear-gradient(45deg, rgb(44, 81, 62), rgb(198, 168, 81));
+            color: white;
+            padding: 15px 25px;
+            border-radius: 25px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(44, 81, 62, 0.3);
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        
+        .contact-info {
+            background: linear-gradient(45deg, rgb(44, 81, 62), rgb(198, 168, 81));
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 30px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(44, 81, 62, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .contact-info:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 35px rgba(44, 81, 62, 0.4);
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        
+        .privacy-container a {
+            color: rgb(44, 81, 62);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .privacy-container a:hover {
+            color: rgb(198, 168, 81);
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .privacy-container {
+                margin: 10px;
+                padding: 20px;
+            }
+            
+            .privacy-container h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img class="logo" src="Logo.png" height="80" width="80">
+        <div class="navigation" id="main-nav">
+            <nav>
+                <ul id="navigation-list">
+                    <li><a href="Trefoil.html"> Home </a></li>
+                    <li><a href="art.html"> Art </a></li>
+                    <li><a href="book.html"> Book </a></li>
+                    <li><a href="about.html"> About </a></li>
+                    <li><a href="contact.html"> Contact </a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="privacy-container">
+        <a href="Trefoil.html" class="back-link">← Back to Home</a>
+        
+        <h1>Privacy Policy</h1>
+        
+        <div class="last-updated">
+            <strong>Last updated: January 2025</strong>
+        </div>
+        
+        <div class="highlight-box">
+            <p><strong>Your privacy is important to us.</strong> This Privacy Policy explains how Trefoil collects, uses, and protects your personal information when you visit our website.</p>
+        </div>
+        
+        <div class="section-card">
+            <h2>1. Information We Collect</h2>
+            <p>We collect information that you provide directly to us, such as when you:</p>
+            <ul>
+                <li>Contact us through our contact form</li>
+                <li>Subscribe to our newsletter</li>
+                <li>Leave comments or feedback</li>
+                <li>Participate in our community features</li>
+            </ul>
+        </div>
+        
+        <div class="section-card">
+            <h2>2. Automatically Collected Information</h2>
+            <p>When you visit our website, we automatically collect certain information about your device, including:</p>
+            <ul>
+                <li>IP address and location data</li>
+                <li>Browser type and version</li>
+                <li>Operating system</li>
+                <li>Pages visited and time spent on each page</li>
+                <li>Referring website</li>
+            </ul>
+        </div>
+        
+        <div class="section-card">
+            <h2>3. How We Use Your Information</h2>
+            <p>We use the information we collect to:</p>
+            <ul>
+                <li>Provide and maintain our services</li>
+                <li>Improve our website and user experience</li>
+                <li>Respond to your inquiries and provide customer support</li>
+                <li>Send you newsletters and updates (with your consent)</li>
+                <li>Analyze website usage and trends</li>
+            </ul>
+        </div>
+        
+        <div class="section-card">
+            <h2>4. Information Sharing</h2>
+            <p>We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except in the following circumstances:</p>
+            <ul>
+                <li>To comply with legal obligations</li>
+                <li>To protect our rights and safety</li>
+                <li>With service providers who assist in operating our website (under strict confidentiality agreements)</li>
+            </ul>
+        </div>
+        
+        <div class="section-card">
+            <h2>5. Cookies and Tracking Technologies</h2>
+            <p>We use cookies and similar tracking technologies to enhance your browsing experience. For detailed information about our use of cookies, please see our <a href="cookies.html">Cookie Policy</a>.</p>
+        </div>
+        
+        <div class="section-card">
+            <h2>6. Data Security</h2>
+            <p>We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure.</p>
+        </div>
+        
+        <div class="section-card">
+            <h2>7. Your Rights</h2>
+            <p>You have the right to:</p>
+            <ul>
+                <li>Access your personal information</li>
+                <li>Correct inaccurate information</li>
+                <li>Request deletion of your information</li>
+                <li>Opt-out of marketing communications</li>
+                <li>Withdraw consent at any time</li>
+            </ul>
+        </div>
+        
+        <div class="section-card">
+            <h2>8. Children's Privacy</h2>
+            <p>Our website is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us.</p>
+        </div>
+        
+        <div class="section-card">
+            <h2>9. Third-Party Links</h2>
+            <p>Our website may contain links to third-party websites. We are not responsible for the privacy practices of these websites. We encourage you to read their privacy policies.</p>
+        </div>
+        
+        <div class="section-card">
+            <h2>10. Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.</p>
+        </div>
+        
+        <div class="contact-info">
+            <h2>11. Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy or our data practices, please contact us through our <a href="contact.html">Contact page</a>.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="art.html">Art</a></li>
+                    <li><a href="book.html">Books</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="https://www.bl.uk/stories/blogs">Blog</a></li>
+                    <li><a href="https://www.thebooksatchel.com/best-books-newsletters-literary-free">Newsletter</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 Trefoil. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html> 

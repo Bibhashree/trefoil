@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Trefoil</title>
+    <link rel="stylesheet" href="Trefoil.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, rgb(152, 180, 165) 0%, rgb(44, 81, 62) 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .terms-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.6;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            margin-bottom: 20px;
+            animation: slideInUp 0.8s ease-out;
+        }
+        
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .terms-container h1 {
+            color: #174324;
+            border-bottom: 3px solid linear-gradient(90deg, rgb(44, 81, 62), rgb(198, 168, 81));
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-align: center;
+            background: linear-gradient(45deg, rgb(44, 81, 62), rgb(198, 168, 81));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .terms-container h2 {
+            color: #174324;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            position: relative;
+            padding-left: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .terms-container h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 25px;
+            background: linear-gradient(45deg, rgb(44, 81, 62), rgb(198, 168, 81));
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        
+        .terms-container h2:hover::before {
+            width: 8px;
+            background: linear-gradient(45deg, rgb(198, 168, 81), rgb(44, 81, 62));
+        }
+        
+        .terms-container h2:hover {
+            color: rgb(44, 81, 62);
+            transform: translateX(5px);
+        }
+        
+        .terms-container p {
+            margin-bottom: 20px;
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.8;
+            transition: all 0.3s ease;
+        }
+        
+        .terms-container p:hover {
+            color: #333;
+            transform: translateX(3px);
+        }
+        
+        .terms-container ul {
+            margin-bottom: 20px;
+            padding-left: 25px;
+            animation: slideInLeft 0.6s ease-out;
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .terms-container li {
+            margin-bottom: 12px;
+            color: #555;
+            position: relative;
+            padding-left: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .terms-container li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: rgb(44, 81, 62);
+            font-size: 0.8em;
+            transition: all 0.3s ease;
+        }
+        
+        .terms-container li:hover {
+            color: #333;
+            transform: translateX(5px);
+        }
+        
+        .terms-container li:hover::before {
+            color: rgb(198, 168, 81);
+            transform: scale(1.2);
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: rgb(44, 81, 62);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            padding: 10px 20px;
+            border-radius: 25px;
+            background: linear-gradient(45deg, rgb(44, 81, 62), rgb(198, 168, 81));
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(44, 81, 62, 0.3);
+        }
+        
+        .back-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(44, 81, 62, 0.4);
+            text-decoration: none;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, rgb(44, 81, 62) 0%, rgb(198, 168, 81) 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 25px 0;
+            box-shadow: 0 8px 25px rgba(44, 81, 62, 0.3);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+        
+        .section-card {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border-left: 5px solid rgb(44, 81, 62);
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            border-left-color: rgb(198, 168, 81);
+        }
+        
+        .last-updated {
+            background: linear-gradient(45deg, rgb(44, 81, 62), rgb(198, 168, 81));
+            color: white;
+            padding: 15px 25px;
+            border-radius: 25px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(44, 81, 62, 0.3);
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        
+        .contact-info {
+            background: linear-gradient(45deg, rgb(44, 81, 62), rgb(198, 168, 81));
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 30px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(44, 81, 62, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .contact-info:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 35px rgba(44, 81, 62, 0.4);
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .terms-container {
+                margin: 10px;
+                padding: 20px;
+            }
+            
+            .terms-container h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img class="logo" src="Logo.png" height="80" width="80">
+        <div class="navigation" id="main-nav">
+            <nav>
+                <ul id="navigation-list">
+                    <li><a href="Trefoil.html"> Home </a></li>
+                    <li><a href="art.html"> Art </a></li>
+                    <li><a href="book.html"> Book </a></li>
+                    <li><a href="about.html"> About </a></li>
+                    <li><a href="contact.html"> Contact </a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="terms-container">
+        <a href="Trefoil.html" class="back-link">← Back to Home</a>
+        
+        <h1>Terms of Service</h1>
+        
+        <div class="last-updated">
+            <strong>Last updated: January 2025</strong>
+        </div>
+        
+        <div class="section-card">
+            <h2>1. Acceptance of Terms</h2>
+            <p>By accessing and using Trefoil ("the Website"), you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.</p>
+        </div>
+        
+        <div class="section-card">
+            <h2>2. Description of Service</h2>
+            <p>Trefoil is a platform that showcases art and literature, providing users with access to curated collections of artwork and book recommendations. Our service includes:</p>
+            <ul>
+                <li>Art gallery and exhibitions</li>
+                <li>Book recommendations and reviews</li>
+                <li>Educational content about artists and authors</li>
+                <li>Community features and discussions</li>
+            </ul>
+        </div>
+        
+        <div class="section-card">
+            <h2>3. User Conduct</h2>
+            <p>You agree to use the Website only for lawful purposes and in accordance with these Terms. You agree not to:</p>
+            <ul>
+                <li>Use the Website in any way that violates any applicable federal, state, local, or international law or regulation</li>
+                <li>Transmit any material that is defamatory, offensive, or otherwise objectionable</li>
+                <li>Attempt to gain unauthorized access to any portion of the Website</li>
+                <li>Interfere with or disrupt the Website or servers connected to the Website</li>
+            </ul>
+        </div>
+        
+        <div class="section-card">
+            <h2>4. Intellectual Property Rights</h2>
+            <p>The Website and its original content, features, and functionality are owned by Trefoil and are protected by international copyright, trademark, patent, trade secret, and other intellectual property laws.</p>
+        </div>
+        
+        <div class="section-card">
+            <h2>5. User-Generated Content</h2>
+            <p>If you submit content to the Website, you grant Trefoil a worldwide, non-exclusive, royalty-free license to use, reproduce, modify, and distribute such content in connection with the Website.</p>
+        </div>
+        
+        <div class="section-card">
+            <h2>6. Privacy Policy</h2>
+            <p>Your privacy is important to us. Please review our Privacy Policy, which also governs your use of the Website, to understand our practices.</p>
+        </div>
+        
+        <div class="section-card">
+            <h2>7. Disclaimers</h2>
+            <p>The information on this Website is provided "as is" without warranty of any kind. Trefoil does not warrant that the Website will be uninterrupted or error-free.</p>
+        </div>
+        
+        <div class="section-card">
+            <h2>8. Limitation of Liability</h2>
+            <p>In no event shall Trefoil be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses.</p>
+        </div>
+        
+        <div class="section-card">
+            <h2>9. Changes to Terms</h2>
+            <p>We reserve the right to modify these terms at any time. We will notify users of any material changes by posting the new Terms on this page.</p>
+        </div>
+        
+        <div class="contact-info">
+            <h2>10. Contact Information</h2>
+            <p>If you have any questions about these Terms of Service, please contact us through our <a href="contact.html">Contact page</a>.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="art.html">Art</a></li>
+                    <li><a href="book.html">Books</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="https://www.bl.uk/stories/blogs">Blog</a></li>
+                    <li><a href="https://www.thebooksatchel.com/best-books-newsletters-literary-free">Newsletter</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 Trefoil. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html> 

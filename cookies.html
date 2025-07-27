@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy - Trefoil</title>
+    <link rel="stylesheet" href="Trefoil.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, rgb(152, 180, 165) 0%, rgb(44, 81, 62) 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .cookies-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.6;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            margin-bottom: 20px;
+            animation: slideInUp 0.8s ease-out;
+        }
+        
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .cookies-container h1 {
+            color: #174324;
+            border-bottom: 3px solid linear-gradient(90deg, rgb(44, 81, 62), rgb(198, 168, 81));
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-align: center;
+            background: linear-gradient(45deg, rgb(44, 81, 62), rgb(198, 168, 81));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .cookies-container h2 {
+            color: #174324;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            position: relative;
+            padding-left: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .cookies-container h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 25px;
+            background: linear-gradient(45deg, rgb(44, 81, 62), rgb(198, 168, 81));
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        
+        .cookies-container h2:hover::before {
+            width: 8px;
+            background: linear-gradient(45deg, rgb(198, 168, 81), rgb(44, 81, 62));
+        }
+        
+        .cookies-container h2:hover {
+            color: rgb(44, 81, 62);
+            transform: translateX(5px);
+        }
+        
+        .cookies-container h3 {
+            color: #555;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            position: relative;
+            padding-left: 15px;
+        }
+        
+        .cookies-container h3::before {
+            content: '🍪';
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+        }
+        
+        .cookies-container p {
+            margin-bottom: 20px;
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.8;
+            transition: all 0.3s ease;
+        }
+        
+        .cookies-container p:hover {
+            color: #333;
+            transform: translateX(3px);
+        }
+        
+        .cookies-container ul {
+            margin-bottom: 20px;
+            padding-left: 25px;
+            animation: slideInLeft 0.6s ease-out;
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .cookies-container li {
+            margin-bottom: 12px;
+            color: #555;
+            position: relative;
+            padding-left: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .cookies-container li::before {
+            content: '🍪';
+            position: absolute;
+            left: 0;
+            color: rgb(44, 81, 62);
+            font-size: 0.8em;
+            transition: all 0.3s ease;
+        }
+        
+        .cookies-container li:hover {
+            color: #333;
+            transform: translateX(5px);
+        }
+        
+        .cookies-container li:hover::before {
+            color: rgb(198, 168, 81);
+            transform: scale(1.2);
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: rgb(44, 81, 62);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            padding: 10px 20px;
+            border-radius: 25px;
+            background: linear-gradient(45deg, rgb(44, 81, 62), rgb(198, 168, 81));
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(44, 81, 62, 0.3);
+        }
+        
+        .back-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(44, 81, 62, 0.4);
+            text-decoration: none;
+        }
+        
+        .cookie-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            animation: slideInUp 0.8s ease-out;
+        }
+        
+        .cookie-table th,
+        .cookie-table td {
+            border: 1px solid rgba(44, 81, 62, 0.2);
+            padding: 15px;
+            text-align: left;
+            transition: all 0.3s ease;
+        }
+        
+        .cookie-table th {
+            background: linear-gradient(45deg, rgb(44, 81, 62), rgb(198, 168, 81));
+            color: white;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        .cookie-table tr:nth-child(even) {
+            background: rgba(44, 81, 62, 0.05);
+        }
+        
+        .cookie-table tr:hover {
+            background: rgba(44, 81, 62, 0.1);
+            transform: scale(1.01);
+        }
+        
+        .cookie-table td:hover {
+            background: rgba(44, 81, 62, 0.15);
+        }
+        
+        .info-box {
+            background: linear-gradient(135deg, rgb(44, 81, 62) 0%, rgb(198, 168, 81) 100%);
+            color: white;
+            border: none;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 25px 0;
+            box-shadow: 0 8px 25px rgba(44, 81, 62, 0.3);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+        
+        .section-card {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border-left: 5px solid rgb(44, 81, 62);
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            border-left-color: rgb(198, 168, 81);
+        }
+        
+        .last-updated {
+            background: linear-gradient(45deg, rgb(44, 81, 62), rgb(198, 168, 81));
+            color: white;
+            padding: 15px 25px;
+            border-radius: 25px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(44, 81, 62, 0.3);
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        
+        .contact-info {
+            background: linear-gradient(45deg, rgb(44, 81, 62), rgb(198, 168, 81));
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 30px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(44, 81, 62, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .contact-info:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 35px rgba(44, 81, 62, 0.4);
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        
+        .cookies-container a {
+            color: rgb(44, 81, 62);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .cookies-container a:hover {
+            color: rgb(198, 168, 81);
+            text-decoration: underline;
+        }
+        
+        .browser-instructions {
+            background: linear-gradient(45deg, rgb(44, 81, 62), rgb(198, 168, 81));
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 25px 0;
+            box-shadow: 0 8px 25px rgba(44, 81, 62, 0.3);
+        }
+        
+        .browser-instructions h3 {
+            color: white;
+            margin-top: 0;
+        }
+        
+        .browser-instructions h3::before {
+            content: '🌐';
+        }
+        
+        .browser-instructions li::before {
+            content: '💻';
+        }
+        
+        @media (max-width: 768px) {
+            .cookies-container {
+                margin: 10px;
+                padding: 20px;
+            }
+            
+            .cookies-container h1 {
+                font-size: 2em;
+            }
+            
+            .cookie-table {
+                font-size: 0.9em;
+            }
+            
+            .cookie-table th,
+            .cookie-table td {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img class="logo" src="Logo.png" height="80" width="80">
+        <div class="navigation" id="main-nav">
+            <nav>
+                <ul id="navigation-list">
+                    <li><a href="Trefoil.html"> Home </a></li>
+                    <li><a href="art.html"> Art </a></li>
+                    <li><a href="book.html"> Book </a></li>
+                    <li><a href="about.html"> About </a></li>
+                    <li><a href="contact.html"> Contact </a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="cookies-container">
+        <a href="Trefoil.html" class="back-link">← Back to Home</a>
+        
+        <h1>Cookie Policy</h1>
+        
+        <div class="last-updated">
+            <strong>Last updated: January 2025</strong>
+        </div>
+        
+        <div class="info-box">
+            <p><strong>What are cookies?</strong> Cookies are small text files that are stored on your device when you visit a website. They help us provide you with a better browsing experience and understand how you use our website.</p>
+        </div>
+        
+        <div class="section-card">
+            <h2>1. How We Use Cookies</h2>
+            <p>Trefoil uses cookies to:</p>
+            <ul>
+                <li>Remember your preferences and settings</li>
+                <li>Analyze website traffic and usage patterns</li>
+                <li>Improve our website functionality and user experience</li>
+                <li>Provide personalized content and recommendations</li>
+                <li>Ensure website security and prevent fraud</li>
+            </ul>
+        </div>
+        
+        <div class="section-card">
+            <h2>2. Types of Cookies We Use</h2>
+            
+            <h3>Essential Cookies</h3>
+            <p>These cookies are necessary for the website to function properly. They enable basic functions like page navigation and access to secure areas of the website.</p>
+            
+            <table class="cookie-table">
+                <thead>
+                    <tr>
+                        <th>Cookie Name</th>
+                        <th>Purpose</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>session_id</td>
+                        <td>Maintains your session while browsing</td>
+                        <td>Session</td>
+                    </tr>
+                    <tr>
+                        <td>language_pref</td>
+                        <td>Remembers your language preference</td>
+                        <td>1 year</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Analytics Cookies</h3>
+            <p>These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously.</p>
+            
+            <table class="cookie-table">
+                <thead>
+                    <tr>
+                        <th>Cookie Name</th>
+                        <th>Purpose</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>_ga</td>
+                        <td>Google Analytics - tracks unique visitors</td>
+                        <td>2 years</td>
+                    </tr>
+                    <tr>
+                        <td>_gid</td>
+                        <td>Google Analytics - tracks page views</td>
+                        <td>24 hours</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Functional Cookies</h3>
+            <p>These cookies enable enhanced functionality and personalization, such as remembering your preferences and settings.</p>
+            
+            <table class="cookie-table">
+                <thead>
+                    <tr>
+                        <th>Cookie Name</th>
+                        <th>Purpose</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>theme_preference</td>
+                        <td>Remembers your theme preference (light/dark)</td>
+                        <td>1 year</td>
+                    </tr>
+                    <tr>
+                        <td>font_size</td>
+                        <td>Remembers your font size preference</td>
+                        <td>1 year</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="section-card">
+            <h2>3. Third-Party Cookies</h2>
+            <p>Some cookies on our website are set by third-party services that we use to enhance your experience:</p>
+            <ul>
+                <li><strong>Google Analytics:</strong> Helps us understand website traffic and user behavior</li>
+                <li><strong>Social Media:</strong> Enables social media sharing and integration</li>
+                <li><strong>Content Delivery Networks:</strong> Improves website loading speed</li>
+            </ul>
+        </div>
+        
+        <div class="section-card">
+            <h2>4. Managing Your Cookie Preferences</h2>
+            <p>You can control and manage cookies in several ways:</p>
+            <ul>
+                <li><strong>Browser Settings:</strong> Most browsers allow you to block or delete cookies through their settings</li>
+                <li><strong>Cookie Consent:</strong> We provide a cookie consent banner that allows you to choose which cookies to accept</li>
+                <li><strong>Third-Party Opt-Out:</strong> You can opt out of third-party cookies through their respective websites</li>
+            </ul>
+        </div>
+        
+        <div class="browser-instructions">
+            <h2>5. How to Disable Cookies</h2>
+            <p>To disable cookies in your browser:</p>
+            <ul>
+                <li><strong>Chrome:</strong> Settings → Privacy and security → Cookies and other site data</li>
+                <li><strong>Firefox:</strong> Options → Privacy & Security → Cookies and Site Data</li>
+                <li><strong>Safari:</strong> Preferences → Privacy → Manage Website Data</li>
+                <li><strong>Edge:</strong> Settings → Cookies and site permissions → Cookies and site data</li>
+            </ul>
+        </div>
+        
+        <div class="section-card">
+            <h2>6. Impact of Disabling Cookies</h2>
+            <p>Please note that disabling cookies may affect the functionality of our website:</p>
+            <ul>
+                <li>Some features may not work properly</li>
+                <li>Your preferences may not be saved</li>
+                <li>Website performance may be reduced</li>
+                <li>Personalized content may not be available</li>
+            </ul>
+        </div>
+        
+        <div class="section-card">
+            <h2>7. Updates to This Policy</h2>
+            <p>We may update this Cookie Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We will notify you of any material changes by posting the updated policy on this page.</p>
+        </div>
+        
+        <div class="contact-info">
+            <h2>8. Contact Us</h2>
+            <p>If you have any questions about our use of cookies or this Cookie Policy, please contact us through our <a href="contact.html">Contact page</a>.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="art.html">Art</a></li>
+                    <li><a href="book.html">Books</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="https://www.bl.uk/stories/blogs">Blog</a></li>
+                    <li><a href="https://www.thebooksatchel.com/best-books-newsletters-literary-free">Newsletter</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 Trefoil. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html> 
